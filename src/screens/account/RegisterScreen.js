@@ -1,12 +1,10 @@
-import { Text, View } from 'react-native'
-import React, { Component } from 'react'
+import { View, Text } from "react-native";
+import React from "react";
 
-export default class RegisterScreen extends Component {
-  render() {
-    return (
-      <View>
-        <Text>RegisterScreen</Text>
-      </View>
-    )
-  }
+export function RegisterScreen() {
+  return (
+    <View>
+      <Text>RegisterScreen</Text>
+    </View>
+  );
 }

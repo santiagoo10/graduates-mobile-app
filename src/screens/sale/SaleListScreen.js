@@ -1,10 +1,10 @@
 import { View, Text } from "react-native";
 import React from "react";
 
-export function SaleDetailScreen() {
+export function SaleListScreen() {
   return (
     <View>
-      <Text>SaleDetailScreen</Text>
+      <Text>SaleListScreen</Text>
     </View>
   );
 }

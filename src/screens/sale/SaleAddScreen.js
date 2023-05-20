@@ -1,12 +1,10 @@
-import { Text, View } from 'react-native'
-import React, { Component } from 'react'
+import { View, Text } from "react-native";
+import React from "react";
 
-export default class SaleAddScreen extends Component {
-  render() {
-    return (
-      <View>
-        <Text>SaleAddScreen</Text>
-      </View>
-    )
-  }
+export function SaleAddScreen() {
+  return (
+    <View>
+      <Text>SaleAddScreen</Text>
+    </View>
+  );
 }
