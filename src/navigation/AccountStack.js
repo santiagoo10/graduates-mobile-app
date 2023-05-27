@@ -1,6 +1,6 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { MyAccountScreen } from "../screens/account/MyAccountScreen";
-import { LoginScreen } from "../screens/account/LoginScreen";
+import { AccountScreen } from "../screens/account/AccountScreen";
+import { LoginScreen } from "../screens/account/loginScreen";
 import { RegisterScreen } from "../screens/account/RegisterScreen";
 import { screen } from "../utils";
 
@@ -11,7 +11,7 @@ export function AccountStack() {
     <Stack.Navigator>
       <Stack.Screen
         name={screen.account.account}
-        component={MyAccountScreen}
+        component={AccountScreen}
         options={{ title: "Cuenta" }}
       />
       <Stack.Screen
