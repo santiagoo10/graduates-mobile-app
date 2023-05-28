@@ -2,19 +2,38 @@ import React, { useState } from "react";
 import { View } from "react-native";
 import { Input, Icon, Button } from "react-native-elements";
 import { useFormik } from "formik";
+import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import { useNavigation } from "@react-navigation/native";
+import Toast from "react-native-toast-message";
 import { initialValues, validationSchema } from "./RegisterForm.data";
 import { styles } from "./RegisterForm.styles";
+import { screen } from "../../../utils";
 
 export function RegisterForm() {
   const [hiddenPassword, setHiddenPassword] = useState(true);
   const [hiddenRepeatPassword, setHiddenRepeatPassword] = useState(true);
+  const navigation = useNavigation();
 
   const formik = useFormik({
     initialValues: initialValues(),
     validationSchema: validationSchema(),
     validateOnChange: false,
-    onSubmit: (data) => {
-      console.log(data);
+    onSubmit: async (formValue) => {
+      try {
+        const auth = getAuth();
+        await createUserWithEmailAndPassword(
+          auth,
+          formValue.email,
+          formValue.password
+        );
+        navigation.navigate(screen.account.account);
+      } catch (error) {
+        Toast.show({
+          type: "error",
+          position: "bottom",
+          text1: "Error al registrarse, intentelo mas tarde",
+        });
+      }
     },
   });
 
@@ -66,6 +85,7 @@ export function RegisterForm() {
         containerStyle={styles.buttonContainer}
         buttonStyle={styles.button}
         onPress={formik.handleSubmit}
+        loading={formik.isSubmitting}
       />
     </View>
   );
