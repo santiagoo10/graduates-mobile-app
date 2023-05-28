@@ -2,19 +2,17 @@ import React, { useState } from "react";
 import { View } from "react-native";
 import { Input, Icon, Button } from "react-native-elements";
 import { useFormik } from "formik";
-import { initialValues } from "./RegisterForm.data";
+import { initialValues, validationSchema } from "./RegisterForm.data";
 import { styles } from "./RegisterForm.styles";
 
 export function RegisterForm() {
   const [hiddenPassword, setHiddenPassword] = useState(true);
   const [hiddenRepeatPassword, setHiddenRepeatPassword] = useState(true);
-  //   const [email, setEmail] = useState("");
-  //   const [password, setPassword] = useState("");
-  //   const [repeatPassword, setRepeatPassword] = useState("");
-  //   const [isVisibleLoading, setIsVisibleLoading] = useState(false);
 
   const formik = useFormik({
     initialValues: initialValues(),
+    validationSchema: validationSchema(),
+    validateOnChange: false,
     onSubmit: (data) => {
       console.log(data);
     },
@@ -23,12 +21,13 @@ export function RegisterForm() {
   return (
     <View style={styles.content}>
       <Input
-        placeholder="Email"
+        placeholder="Correo electronico"
         containerStyle={styles.input}
         rightIcon={
           <Icon type="material-community" name="at" iconStyle={styles.icon} />
         }
         onChangeText={(text) => formik.setFieldValue("email", text)}
+        errorMessage={formik.errors.email}
       />
       <Input
         placeholder="Contraseña"
@@ -44,6 +43,7 @@ export function RegisterForm() {
           />
         }
         onChangeText={(text) => formik.setFieldValue("password", text)}
+        errorMessage={formik.errors.password}
       />
       <Input
         placeholder="Repetir Contraseña"
@@ -59,6 +59,7 @@ export function RegisterForm() {
           />
         }
         onChangeText={(text) => formik.setFieldValue("repeatPassword", text)}
+        errorMessage={formik.errors.repeatPassword}
       />
       <Button
         title="Unirse"
