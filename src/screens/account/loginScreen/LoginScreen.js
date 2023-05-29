@@ -14,7 +14,7 @@ export function LoginScreen() {
   };
 
   return (
-    <ScrollView>
+    <ScrollView style={styles.container}>
       <Image
         source={require("../../../../assets/logo-unl-3.png")}
         style={styles.logo}
@@ -24,7 +24,7 @@ export function LoginScreen() {
         <LoginForm />
 
         <Text style={styles.textRegister}>
-          ¿Aún no tienes cuenta{" "}
+          ¿Aún no tienes cuenta?{" "}
           <Text style={styles.btnRegister} onPress={goToRegister}>
             Regístrarse
           </Text>
