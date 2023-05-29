@@ -2,7 +2,7 @@ import { View } from "react-native";
 import { Image } from "react-native-elements";
 import React from "react";
 import { styles } from "./RegisterScreen.styles";
-import { RegisterForm } from "../../../components/auth";
+import { RegisterForm } from "../../../components/Auth";
 import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
 
 export function RegisterScreen() {
