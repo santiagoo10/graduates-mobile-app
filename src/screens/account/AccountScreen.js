@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import { UserGuestScreen } from "./userGuestScreen";
-import { UserLoggedScreen } from "./UserLoggedScreen";
+import { UserLoggedScreen } from "./userLogged";
 import { LoadingModal } from "../../components";
 
 export function AccountScreen() {
