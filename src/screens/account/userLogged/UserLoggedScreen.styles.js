@@ -1,16 +1,22 @@
 import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
-  container: {
-    backgroundColor: "white",
+  view: {
+    minHeight: "100%",
+    backgroundColor: "#f2f2f2",
   },
-  logo: {
-    width: "100%",
-    height: 150,
-    marginTop: 20,
+  button: {
+    marginTop: 30,
+    borderRadius: 0,
+    backgroundColor: "#fff",
+    borderTopWidth: 1,
+    borderTopColor: "#e3e3e3",
+    borderBottomWidth: 1,
+    borderBottomColor: "#e3e3e3",
+    paddingTop: 10,
+    paddingBottom: 10,
   },
-  viewForm: {
-    marginRight: 40,
-    marginLeft: 40,
+  title: {
+    color: "#319bb4",
   },
 });
