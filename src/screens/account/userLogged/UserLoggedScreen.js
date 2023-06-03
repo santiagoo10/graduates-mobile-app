@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { Button } from "react-native-elements";
 import { getAuth, signOut } from "firebase/auth";
 import { LoadingModal } from "../../../components";
-import { InfoUser } from "../../../components/account";
+import { InfoUser, AccountOptions } from "../../../components/account";
 import { styles } from "./UserLoggedScreen.styles";
 
 export function UserLoggedScreen() {
@@ -21,7 +21,7 @@ export function UserLoggedScreen() {
     <View style={styles.View}>
       <InfoUser setLoading={setLoading} setLoadingText={setLoadingText} />
 
-      {/* <AccountOptions onReload={onReload} /> */}
+      <AccountOptions onReload={onReload} />
 
       <Button
         title="Cerrar sesión"
