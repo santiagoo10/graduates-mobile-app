@@ -4,6 +4,8 @@ import { ListItem, Icon, Text } from "react-native-elements";
 import { map } from "lodash";
 import { Modal } from "../../components";
 import { ChangeDisplayNameForm } from "./changeDisplayName";
+import { ChangeEmailForm } from "./changeEmail";
+import { ChangePasswordForm } from "./changePassword";
 
 export function AccountOptions(props) {
   const { onReload } = props;
@@ -22,13 +24,12 @@ export function AccountOptions(props) {
 
     if (key === "email") {
       setRenderComponent(
-        //     <ChangeEmailForm onClose={onCloseOpenModal} onReload={onReload} />
-        <Text>{key} </Text>
+        <ChangeEmailForm onClose={onCloseOpenModal} onReload={onReload} />
       );
     }
 
     if (key === "password") {
-      // setRenderComponent(<ChangePasswordForm onClose={onCloseOpenModal} />);
+      setRenderComponent(<ChangePasswordForm onClose={onCloseOpenModal} />);
     }
 
     onCloseOpenModal();
