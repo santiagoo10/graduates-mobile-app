@@ -3,13 +3,14 @@ import { ScrollView } from "react-native";
 import { Button } from "react-native-elements";
 import { styles } from "./AddSaleScreen.styles";
 import { InfoForm } from "../../../components/sale/addSale";
+import { initialVales, validationSchema } from "./AddSaleScreen.data";
 import { useFormik } from "formik";
 //import { v4 as uuid } from "uuid";
 
 export function SaleAddScreen() {
   const formik = useFormik({
-    // initialValues: initialVales(),
-    // validationSchema: validationSchema(),
+    initialValues: initialVales(),
+    validationSchema: validationSchema(),
     validateOnChange: false,
     onSubmit: async (formValue) => {
       try {
@@ -37,8 +38,8 @@ export function SaleAddScreen() {
       <Button
         title="Crear restaurante"
         buttonStyle={styles.addSale}
-        // onPress={formik.handleSubmit}
-        // loading={formik.isSubmitting}
+        onPress={formik.handleSubmit}
+        loading={formik.isSubmitting}
       />
     </ScrollView>
   );

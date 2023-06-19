@@ -3,6 +3,7 @@ import { View } from "react-native";
 import { Input } from "react-native-elements";
 // import { MapForm } from "../MapForm";
 import { styles } from "./InfoForm.styles";
+import { MapForm } from "../mapForm";
 
 export function InfoForm(props) {
   const { formik } = props;
@@ -47,16 +48,15 @@ export function InfoForm(props) {
           errorMessage={formik.errors.description}
         />
       </View>
-
-      {/* <MapForm show={showMap} close={onOpenCloseMap} formik={formik} /> */}
+      <MapForm show={showMap} close={onOpenCloseMap} formik={formik} />
     </>
   );
 }
 
 const getColorIconMap = (formik) => {
-  //   if (formik.errors.location) return "#ff0000";
+  if (formik.errors.location) return "#ff0000";
 
-  //   if (formik.values.location) return "#00a680";
+  if (formik.values.location) return "#00a680";
 
   return "#c2c2c2";
 };

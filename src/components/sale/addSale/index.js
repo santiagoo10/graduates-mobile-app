@@ -1,4 +1,4 @@
 export * from "./infoForm";
-// export * from "./MapForm";
+export * from "./mapForm";
 // export * from "./UploadImagesForm";
 // export * from "./ImageRestaurant";
