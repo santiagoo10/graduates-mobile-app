@@ -1,2 +1,2 @@
-export * from "./RegisterForm";
-export * from "./LoginForm";
+export * from "./registerForm";
+export * from "./loginForm";

@@ -2,7 +2,7 @@ import React from "react";
 import { View, ScrollView } from "react-native";
 import { Text, Image } from "react-native-elements";
 import { useNavigation } from "@react-navigation/native";
-import { LoginForm } from "../../../components/Auth";
+import { LoginForm } from "../../../components/auth";
 import { screen } from "../../../utils";
 import { styles } from "./LoginScreen.styles";
 

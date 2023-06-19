@@ -1,7 +1,8 @@
 import { View, Text } from "react-native";
 import { Button } from "react-native-elements";
 import React from "react";
-import { screen } from "../../utils";
+import { screen } from "../../../utils";
+import { styles } from "./SaleListScreen.styles";
 
 export function SaleListScreen(props) {
   const { navigation } = props;

@@ -1,7 +1,7 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { SaleListScreen } from "../screens/sale/SaleListScreen";
-import { SaleAddScreen } from "../screens/sale/SaleAddScreen";
-import { SaleDetailScreen } from "../screens/sale/SaleDetailScreen";
+import { SaleListScreen } from "../screens/sale/listScreen";
+import { SaleAddScreen } from "../screens/sale/addSreen";
+import { SaleDetailScreen } from "../screens/sale/detailScreen";
 import { screen } from "../utils";
 
 const Stack = createNativeStackNavigator();
