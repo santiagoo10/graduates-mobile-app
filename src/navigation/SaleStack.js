@@ -1,6 +1,6 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { SaleListScreen } from "../screens/sale/listScreen";
-import { SaleAddScreen } from "../screens/sale/addSreen";
+import { SaleAddScreen } from "../screens/sale/addScreen";
 import { SaleDetailScreen } from "../screens/sale/detailScreen";
 import { screen } from "../utils";
 
