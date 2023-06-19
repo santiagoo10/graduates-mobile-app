@@ -1,5 +1,5 @@
 import { View, Text } from "react-native";
-import { Button } from "react-native-elements";
+import { Icon } from "react-native-elements";
 import React from "react";
 import { screen } from "../../../utils";
 import { styles } from "./SaleListScreen.styles";
@@ -12,9 +12,17 @@ export function SaleListScreen(props) {
   };
 
   return (
-    <View>
-      <Text>SaleListScreen</Text>
-      <Button title="Agregar beneficio" onPress={goToAdd} />
+    <View style={styles.content}>
+      <Text>Detalle de Servicios</Text>
+
+      <Icon
+        reverse
+        type="material-community"
+        name="plus"
+        color="#319bb4"
+        containerStyle={styles.btnContainer}
+        onPress={goToAdd}
+      />
     </View>
   );
 }
