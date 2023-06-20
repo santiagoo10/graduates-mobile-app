@@ -25,16 +25,16 @@ export function SaleListScreen(props) {
     <View style={styles.content}>
       <Text>Detalle de Servicios</Text>
 
-      {currentUser && (
-        <Icon
-          reverse
-          type="material-community"
-          name="plus"
-          color="#319bb4"
-          containerStyle={styles.btnContainer}
-          onPress={goToAdd}
-        />
-      )}
+      {/* {currentUser && ( */}
+      <Icon
+        reverse
+        type="material-community"
+        name="plus"
+        color="#319bb4"
+        containerStyle={styles.btnContainer}
+        onPress={goToAdd}
+      />
+      {/* )} */}
     </View>
   );
 }
