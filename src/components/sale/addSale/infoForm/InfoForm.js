@@ -56,7 +56,7 @@ export function InfoForm(props) {
 const getColorIconMap = (formik) => {
   if (formik.errors.location) return "#ff0000";
 
-  if (formik.values.location) return "#00a680";
+  if (formik.values.location) return "#319bb4";
 
   return "#c2c2c2";
 };

@@ -8,7 +8,7 @@ import { Modal } from "../../../shared";
 import { styles } from "./MapForm.styles";
 
 export function MapForm(props) {
-  const { show, close } = props;
+  const { show, close, formik } = props;
 
   const [location, setLocation] = useState({
     latitude: 0.001,
@@ -44,7 +44,7 @@ export function MapForm(props) {
   }, []);
 
   const saveLocation = () => {
-    //formik.setFieldValue("location", location);
+    formik.setFieldValue("location", location);
     close();
   };
 
